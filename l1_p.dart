@@ -20,6 +20,7 @@ void main() {
   ///
   ///. student class
   ///
+  /*
   final s1 = student();
   s1.name = 'shayan Zahid';
   s1.rollNUmber = 089;
@@ -31,6 +32,7 @@ void main() {
   s2.rollNUmber = 089;
   s2.marks = [65, 59, 76, 51, 82];
   s2.displayInfo();
+  */
 }
 
 class car {
@@ -56,6 +58,7 @@ class student {
   double? percentage;
   String stars =
       "**************************************************************************************";
+  student(this.name, this.rollNUmber, this.marks, this.percentage);
   void displayInfo() {
     print("student name : $name\nroll number : $rollNUmber");
     double sum = 0;
