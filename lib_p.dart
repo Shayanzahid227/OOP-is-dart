@@ -29,17 +29,9 @@ void main() {
   lib.loanBooks(member1, book1);
 
   ///
-  ///. again show all books that which books are available right now
+  ///. again show all books that which books are given to some one
   ///
   lib.ListAllLoansBooks();
-
-  ///
-  ///. now loan class will cal for info that who has loaned the book
-  ///
-
-  ///
-  ///
-  ///
 }
 
 ///
@@ -51,6 +43,37 @@ class Book {
   String? isbn;
   bool? isAvailable;
   Book(this.title, this.author, this.isbn, this.isAvailable);
+}
+
+///
+///  member class
+///
+class Member {
+  String? name;
+  int? memberId;
+  Member({this.name, this.memberId});
+}
+
+///
+///  loan class to whom and which book was given
+///
+class Loan {
+  Book book; // class Book and it's object book
+  Member member; // Member class and it's object member
+  DateTime loaDate; // default in dart
+  DateTime? returnDate;
+  Loan({
+    // make this required because it is important and must not be null to identify whom and which book was given
+    required this.book,
+    required this.member,
+    required this.loaDate,
+    this.returnDate,
+  });
+  // when book in returned then make it's availability true
+  void returnBook() {
+    returnDate = DateTime.now();
+    book.isAvailable = true; // make it true
+  }
 }
 
 ///
@@ -110,36 +133,5 @@ class Library {
     } else {
       print("sorry ${book.title} is not available ");
     }
-  }
-}
-
-///
-///  member class
-///
-class Member {
-  String? name;
-  int? memberId;
-  Member({this.name, this.memberId});
-}
-
-///
-///  loan class to whom and which book was given
-///
-class Loan {
-  Book book; // class Book and it's object book
-  Member member; // Member class and it's object member
-  DateTime loaDate; // default in dart
-  DateTime? returnDate;
-  Loan({
-    // make this required because it is important and must not be null to identify whom and which book was given
-    required this.book,
-    required this.member,
-    required this.loaDate,
-    this.returnDate,
-  });
-  // when book in returned then make it's availability true
-  void returnBook() {
-    returnDate = DateTime.now();
-    book.isAvailable = true; // make it true
   }
 }
