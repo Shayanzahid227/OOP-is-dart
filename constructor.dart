@@ -1,10 +1,10 @@
 // default constructor called once we initialized object of that class
 void main() {
   List<student> info = [
-    student('Shayan', 'B', [89, 91, 86, 85, 76]),
-    student('Hasnain', 'C', [99, 71, 76, 65, 56]),
-    student('Masoad', 'A', [79, 71, 77, 98, 76]),
-    student('Yasir', 'D', [99, 91, 96, 95, 96]),
+    student(name: 'Shayan', section: 'B', marks: [89, 91, 86, 85, 76]),
+    student(name: 'Hasnain', section: 'C', marks: [99, 71, 76, 65, 56]),
+    student(name: 'Masoad', section: 'A', marks: [79, 71, 77, 98, 76]),
+    student(name: 'Yasir', section: 'D', marks: [99, 91, 96, 95, 96]),
   ];
   /*
   for (int idx = 0; idx < info.length; idx++) {
@@ -36,7 +36,7 @@ class student {
   double? percentage;
   List<int>? marks = [];
 
-  student(this.name, this.section, this.marks);
+  student({required this.name, required this.section, this.marks});
 
   ///
   /// calculate student percentage
