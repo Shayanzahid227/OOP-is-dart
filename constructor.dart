@@ -6,6 +6,7 @@ void main() {
     student('Masoad', 'A', [79, 71, 77, 98, 76]),
     student('Yasir', 'D', [99, 91, 96, 95, 96]),
   ];
+  /*
   for (int idx = 0; idx < info.length; idx++) {
     var i = info[idx];
     i.calPercentage();
@@ -13,6 +14,20 @@ void main() {
       "student ${idx + 1} record: \nname: ${i.name}\nsection: ${i.section}\nmarks: ${i.marks}\nPercentage: ${i.percentage?.toStringAsFixed(2)}%\n\n**************************************************************\n\n",
     );
   }
+  */
+
+  ///
+  /// booth foreach loop show same result but above one also show index
+  ///
+
+  /*
+  info.forEach((i) {
+    i.calPercentage();
+    print(
+      " record: \nname: ${i.name}\nsection: ${i.section}\nmarks: ${i.marks}\nPercentage: ${i.percentage?.toStringAsFixed(2)}%\n\n**************************************************************\n\n",
+    );
+  });
+  */
 }
 
 class student {
