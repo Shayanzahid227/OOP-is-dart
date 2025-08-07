@@ -31,7 +31,16 @@ void main() {
   ///
   ///. again show all books that which books are given to some one
   ///
+  print("\n");
   lib.ListAllLoansBooks();
+  print("\n");
+
+  ///
+  /// now when all books list show then book 1 availability will be false
+  ///
+  print("\n");
+  lib.listAllBooks();
+  print("\n");
 }
 
 ///
@@ -97,6 +106,7 @@ class Library {
   ///. list all books
   void listAllBooks() {
     int ind = 0; // ✅ Declare outside
+    print('--list of all  books--');
     books.forEach((i) {
       ind++; // ✅ Increment with each iteration
       print(
@@ -110,7 +120,7 @@ class Library {
   ///
   void ListAllLoansBooks() {
     int ind = 0;
-    print('--list of all loans books');
+    print('--list of all loans books--');
     loanBooksList.forEach((i) {
       ind++;
       print(
