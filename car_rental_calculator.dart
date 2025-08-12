@@ -8,7 +8,7 @@ void main() {
   print(
     "\nRental price is ${c.carRentalCalculator(8)}\n*************************************************************************************************",
   );
-  bike b = bike('Yamaha', 'classic19', '1998', 2001, 8);
+  bike b = bike('Yamaha', 'classic19', '1998', 2001, 2);
   b.displayInfo();
   print(
     "\nRental price is ${b.carRentalCalculator(5)}\n*************************************************************************************************",
@@ -68,22 +68,22 @@ class car extends Vehicle {
 }
 
 class bike extends Vehicle {
-  int? carier;
-  bike(String? brand, String? name, String? model, int? year, this.carier)
+  int? Passenger;
+  bike(String? brand, String? name, String? model, int? year, this.Passenger)
     : super(brand, name, model, year);
 
   @override
   void displayInfo() {
     super.displayInfo();
-    print("Carier: $carier");
+    print("Passenger: $Passenger");
   }
 
   @override
   double carRentalCalculator(int days) {
-    if (carier! >= 3) {
-      return super.carRentalCalculator(days) + 20 * days;
-    } else if (carier! >= 2) {
+    if (Passenger! <= 3) {
       return super.carRentalCalculator(days) + 30 * days;
+    } else if (Passenger! <= 2) {
+      return super.carRentalCalculator(days) + 20 * days;
     } else {
       return super.carRentalCalculator(days) + 50 * days;
     }

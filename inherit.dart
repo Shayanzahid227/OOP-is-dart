@@ -42,6 +42,13 @@ void main() {
   teacher1.displayParentInfo('Teacher');
   admin1.displayParentInfo('Admin');
   swiper.displayParentInfo('swiper');
+
+  ///
+  ///
+  ///
+  ///
+  ///
+  List<info> polyMorphism = [student(), teacher(), class4()];
 }
 
 ///
